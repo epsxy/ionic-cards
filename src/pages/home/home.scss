@@ -1,0 +1,10 @@
+page-home {
+    .toolbar {
+        .toolbar-title {
+            color: map-get($colors, light);
+        }
+        .toolbar-background {
+           background-color: map-get($colors, primary);
+        }
+    }
+}

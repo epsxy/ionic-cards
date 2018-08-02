@@ -1,0 +1,7 @@
+{
+  "name": "ionicCardsApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

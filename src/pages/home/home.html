@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar class="barbar">
+    <ion-title>
+      Cards
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let card of cards">
+      <ion-card>
+        <ion-card-content>
+          {{card.name}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

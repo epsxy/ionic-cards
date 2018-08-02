@@ -1,0 +1,34 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+
+import { IonicCardsApp } from './app.component';
+import { HomePage } from '../pages/home/home';
+import { HttpClientModule } from '@angular/common/http';
+import { CardsProvider } from '../providers/card/data';
+
+@NgModule({
+  declarations: [
+    IonicCardsApp,
+    HomePage
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    IonicModule.forRoot(IonicCardsApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    IonicCardsApp,
+    HomePage
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    CardsProvider,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
+  ]
+})
+export class AppModule { }
